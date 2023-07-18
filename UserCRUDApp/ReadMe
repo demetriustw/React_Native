@@ -1,0 +1,11 @@
+Run npm install
+
+go to the components file and,
+fill in the "firebaseConfig" const
+
+set up expo with "sudo npm install -g expo-cli"
+
+run the app with npm start
+
+press a to open the android version
+press i to open the iOS version
