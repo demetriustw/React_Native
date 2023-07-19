@@ -6,6 +6,7 @@ import {
   TextInput,
   Button,
   FlatList,
+  Alert,
 } from "react-native";
 
 import { onValue, ref, set, update, remove } from "firebase/database";
@@ -50,12 +51,30 @@ export default function App() {
 
   function readData() {
     const starCountRef = ref(db, "users/" + username);
+
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
 
-      {
-        setEmail(data.email);
-      }
+      Alert.alert(
+        "User Info",
+        data.username + ": " + data.email,
+        [
+          {
+            text: "Cancel",
+            onPress: () => Alert.alert("Cancel Pressed"),
+            style: "cancel",
+          },
+        ],
+        {
+          cancelable: true,
+          onDismiss: () =>
+            Alert.alert(
+              "This alert was dismissed by tapping outside of the alert dialog."
+            ),
+        }
+      );
+
+      // setEmail();
     });
   }
 
