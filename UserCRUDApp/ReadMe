@@ -1,6 +1,6 @@
 Run npm install
 
-go to the components file and,
+go to the config file in the components folder and,
 fill in the "firebaseConfig" const
 
 set up expo with "sudo npm install -g expo-cli"
