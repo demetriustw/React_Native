@@ -3,6 +3,8 @@ Run npm install
 go to the config file in the components folder and,
 fill in the "firebaseConfig" const
 
+run "npm install" in your turminal
+
 set up expo with "sudo npm install -g expo-cli"
 
 run the app with npm start
